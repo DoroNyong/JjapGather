@@ -10,12 +10,15 @@ public class TopDownMovement : MonoBehaviour
     private Vector2 _movementDirection = Vector2.zero;
     private Rigidbody2D _rigidbody;
 
+    private Animator _animator;
+
     public int speed = 10;
 
     private void Awake()
     {
         _controller = GetComponent<TopDownCharacterController>();
         _rigidbody = GetComponent<Rigidbody2D>();
+        _animator = GameObject.Find("pumpkin_dude_idle_anim_f0").GetComponent<Animator>();
     }
 
     private void Start()
@@ -36,7 +39,14 @@ public class TopDownMovement : MonoBehaviour
     private void ApplyMovment(Vector2 direction)
     {
         direction = direction * speed;
-
+        if (direction == Vector2.zero)
+        {
+            _animator.SetBool("IsIdle", true);
+        }
+        else
+        {
+            _animator.SetBool("IsIdle", false);
+        }
         _rigidbody.velocity = direction;
     }
 }
