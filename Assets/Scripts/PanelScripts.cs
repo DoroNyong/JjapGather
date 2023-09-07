@@ -27,7 +27,10 @@ public class PanelScripts : MonoBehaviour
 
     public void SetOffPanel()
     {
-        GameName.text = PanelName.text;
-        panel.SetActive(false);
+        if (PanelName.text.Length >= 2 && PanelName.text.Length <= 10)
+        {
+            GameName.text = PanelName.text;
+            panel.SetActive(false);
+        }
     }
 }
