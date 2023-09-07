@@ -314,6 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2edc483142f7ab84da154618ad6dbffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Panel: {fileID: 1983027174}
 --- !u!50 &229825329
 Rigidbody2D:
   serializedVersion: 4
@@ -9295,7 +9296,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &934788151
 RectTransform:
